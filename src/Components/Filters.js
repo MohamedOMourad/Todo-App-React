@@ -1,5 +1,5 @@
 import { Button, Navbar, Nav } from "react-bootstrap";
-function Filters({ addFilteration, uncheckAllTasks, checkAllTasks }) {
+function Filters({ addFiltration, uncheckAllTasks, checkAllTasks }) {
     return (
 
         <div>
@@ -13,9 +13,9 @@ function Filters({ addFilteration, uncheckAllTasks, checkAllTasks }) {
                         navbarScroll
                     >
                         <div className=" w-100 d-flex justify-content-evenly  flex-wrap">
-                            <Button onClick={() => addFilteration('all tasks')} className="m-1 " size="sm" variant="primary">All Tasks</Button>
-                            <Button onClick={() => addFilteration('checked tasks')} className="m-1 " size="sm" variant="success">Checked Tasks</Button>
-                            <Button onClick={() => addFilteration('unchecked tasks')} className="m-1 " size="sm" variant="secondary">Unchecked Tasks</Button>
+                            <Button onClick={() => addFiltration('all tasks')} className="m-1 " size="sm" variant="primary">All Tasks</Button>
+                            <Button onClick={() => addFiltration('checked tasks')} className="m-1 " size="sm" variant="success">Checked Tasks</Button>
+                            <Button onClick={() => addFiltration('unchecked tasks')} className="m-1 " size="sm" variant="secondary">Unchecked Tasks</Button>
                             <Button onClick={() => checkAllTasks()} className="m-1 " size="sm" variant="warning">Check All</Button>
                             <Button onClick={() => uncheckAllTasks()} className="m-1 " size="sm" variant="danger">Uncheck All</Button>
                         </div>

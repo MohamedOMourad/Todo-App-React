@@ -4,7 +4,6 @@ import Filters from './Components/Filters';
 import InputTask from './Components/InputTask';
 import TaskList from './Components/TaskList';
 import Footer from './Components/Footer'
-// import { Button, InputGroup, Form, Container, Row, Col } from 'react-bootstrap';
 
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
   };
 
   function makeChecked(id) {
-
     setTasks(oldTasks => oldTasks.map(task => {
       if (task.id === id) {
         task.checked = !task.checked
@@ -27,7 +25,7 @@ function App() {
     }));
   }
 
-  const addFilteration = (val) => {
+  const addFiltration = (val) => {
     setFilter(val)
   }
 
@@ -49,7 +47,6 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("TaskList", JSON.stringify(tasks));
-    // updateTasksList();
   }, [tasks])
 
   const uncheckAllTasks = () => {
@@ -69,7 +66,7 @@ function App() {
 
   return (
     <div className="App">
-      <Filters addFilteration={addFilteration} uncheckAllTasks={uncheckAllTasks} checkAllTasks={checkAllTasks} />
+      <Filters addFiltration={addFiltration} uncheckAllTasks={uncheckAllTasks} checkAllTasks={checkAllTasks} />
       <InputTask addToTaskList={addToTaskList} />
       <TaskList updateTasksList={updateTasksList} makeChecked={makeChecked} deleteTask={deleteTask} />
       <Footer />

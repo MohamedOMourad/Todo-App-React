@@ -14,7 +14,9 @@ function InputTask({ addToTaskList }) {
                 <Col>
                     <div >
                         <InputGroup className='my-5 ' >
-                            <Form.Control onKeyDown={(e) => e.key === 'Enter' ? addToTask(): null} onChange={(e) => setTask(e.target.value)} placeholder="Add Your Task" value={task} className='border border-warning' />
+                            <Form.Control onKeyDown={(e) => e.key === 'Enter' ?
+                                addToTask() : null} onChange={(e) => setTask(e.target.value)}
+                                placeholder="Add Your Task" value={task} className='border border-warning' />
                             <Button onClick={addToTask} variant="warning">+</Button>
                         </InputGroup>
                     </div>
